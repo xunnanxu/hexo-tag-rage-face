@@ -1,0 +1,28 @@
+{
+    "name": "hexo-tag-rage-face",
+    "author": "Shawn Xu <xunnan.xu@gmail.com>",
+    "description:": "Hexo tag support for pulling rage faces",
+    "repository": "xunnanxu/hexo-tag-rage-face",
+    "main": "index.js",
+    "dependencies": {
+        "hexo": "^3",
+        "bluebird": "^3",
+        "request": "^2"
+    },
+    "peerDependencies": {
+        "hexo": "^3",
+        "bluebird": "^3",
+        "request": "^2"
+    },
+    "devDependencies": {
+        "eslint": ">3"
+    },
+    "scripts": {
+        "lint": "eslint *.js"
+    },
+    "keywords": [
+        "hexo",
+        "tag",
+        "rage"
+    ]
+}
