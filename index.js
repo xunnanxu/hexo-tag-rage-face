@@ -1,6 +1,7 @@
 /*global hexo:true*/
 
 (function (hexo) {
+    var logger = require('hexo-log')(hexo.env);
     var Promise = require('bluebird');
     var request = Promise.promisify(require('request'));
 
@@ -16,12 +17,15 @@
             }
             var cached = _cache[name];
             if (cached) {
+                logger.debug('Loaded ' + name + ' from cache: ' + cached);
                 return Promise.resolve(cached);
             }
+            logger.debug('Looking for ' + name + ' at: ' + urls[i]);
             return request(urls[i]).then(function (response) {
                 if (response.statusCode !== 200) {
                     return requestHelper(i + 1);
                 }
+                logger.debug(name + ' found at ' + urls[i]);
                 _cache[name] = urls[i];
                 return urls[i];
             }, function () {
@@ -67,6 +71,7 @@
                 }
                 return '<img ' + imgAttrStrs.join(' ') + '>';
             }
+            logger.debug(name + ' not found at ' + baseUrl);
             return '';
         });
     }, {
