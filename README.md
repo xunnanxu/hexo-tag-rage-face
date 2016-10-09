@@ -30,4 +30,3 @@ You can add more attributes to the tag using `key:value` pattern. If the value h
 
 1. Extension list is hard-coded for now.
 2. Source site url is hard-coded.
-3. memes.at doesn't have SSL support so if your blog uses https it won't work due to browser secruity enforcement.
