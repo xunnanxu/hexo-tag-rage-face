@@ -1,6 +1,6 @@
 {
     "name": "hexo-tag-rage-face",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "author": "Shawn Xu <xunnan.xu@gmail.com>",
     "description:": "Hexo tag support for pulling rage faces",
     "repository": "xunnanxu/hexo-tag-rage-face",
